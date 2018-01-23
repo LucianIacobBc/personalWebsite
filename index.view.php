@@ -16,8 +16,9 @@
       <li><?=$item['name'] ?> status: <?=($item['completed'] ? 'completed': 'incomplete');?></li>
     <?php endforeach; ?>
     <h4><?=$titles[0]?></h4>
-    <?php foreach ($myPerson as $key => $value): ?>
+    <?php foreach ($PersonData[0] as $key => $value): ?>
       <li><?=$key ?>: <?=$value ?></li>
     <?php endforeach; ?>
+  <h4> }</h4>
   </body>
 </html>
