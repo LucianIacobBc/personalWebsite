@@ -11,7 +11,7 @@
   }
   </style>
   <body>
-    <?= $app; ?>
+  
     <?php foreach ($todoList as $item): ?>
       <li><?=$item['name'] ?> status: <?=($item['completed'] ? 'completed': 'incomplete');?></li>
     <?php endforeach; ?>

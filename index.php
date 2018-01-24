@@ -1,21 +1,17 @@
 <?php
 
 
-$result=require "bootstrap.php";
+$result=require "core/bootstrap.php";
 require "todolist.php";
 
 
 
-$PersonData=$result->querryAll('person', 'Person');
 
-var_dump($PersonData);
+require Router::loadFile('routes.php')->delegate(Request::uri());
+
 
 $app ="Lucian Iacob Persoanl Website";
 
 $titles = [
   "class Person{",
 ];
-
-
-
-require "index.view.php";
