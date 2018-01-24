@@ -1,9 +1,10 @@
 <?php
 
 class ConnectDB {
-  public static function CreateDBConnection() {
+  public static function CreateDBConnection($config) {
     try {
-      $db = new PDO('mysql:host=localhost;dbname=lucian_personal_website', "root", "");
+      $db = new PDO($config['database']['dsn'].";"."dbname={$config['database']['dbname']}",
+      $config['database']["dbusername"],   $config['database']["password"]);
       return $db;
     }
     catch(PDOException $e){
