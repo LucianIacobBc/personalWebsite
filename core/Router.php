@@ -18,6 +18,6 @@ class Router {
     if (array_key_exists($uri, $this->routes)) {
           return $this->routes[$uri];
       }
-      //throw new Exception('Seems you hit a dead end.');
+    return "views/404.php";
   }
 }
