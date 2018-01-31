@@ -1,0 +1,55 @@
+body {
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-columns {
+  margin-top: 15%;
+}
+
+.social-links {
+  font-family: 'Anton', sans-serif;
+}
+
+.geek-quote h4 {
+  margin-top:90px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.my-description {
+    font-family: 'Roboto', sans-serif;
+}
+
+.my-description-class-keyword {
+  color: #4B0082;
+}
+
+.my-description-class-name {
+  color:#CCCC00;
+}
+
+.my-description-members {
+  list-style-type:none;
+}
+
+.my-description-members-visibility {
+  color: #4B0082;
+}
+
+.my-description-members-name {
+
+  color:#8B0000;
+}
+
+.my-description-members-value {
+  color:#228B22;
+}
+.call-my-description {
+  cursor: pointer;
+  border:none;
+  background-color:transparent;
+}
+{
+  text-align:center;
+  margin-top:60px
+}

@@ -8,11 +8,11 @@ class QueryCreator {
   public function querryAll($table, $className="Person"){
      $statement=$this -> db->prepare("select * from {$table}");
      $statement->execute();
-     return $statement->fetchAll(PDO::FETCH_CLASS, $className);
+     return $statement->fetchAll(PDO::FETCH_CLASS, "App\\Core\\{$className}");
   }
   public function querryWhere($table, $className="MemberType", $where_clause){
      $statement=$this -> db->prepare("select * from {$table} where name='$where_clause'");
      $statement->execute();
-     return $statement->fetchAll(PDO::FETCH_CLASS, $className);
+     return $statement->fetchAll(PDO::FETCH_CLASS, "App\\Core\\{$className}");
   }
 }

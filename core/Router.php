@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core;
+
+//use App\Controllers\mainController;
+
 class Router {
 
   protected $routes=[];
@@ -16,8 +20,18 @@ class Router {
 
   public function delegate($uri){
     if (array_key_exists($uri, $this->routes)) {
-          return $this->routes[$uri];
-      }
+      return $this->callController(...explode('@', $this->routes[$uri]));
+    }
     return "views/404.php";
+  }
+
+  protected function callController ($controller, $method){
+    $controller = "App\\Controllers\\{$controller}";
+    $controller = new $controller;
+    if(! method_exists($controller, $method)){
+      return "views/404.php";
+    }
+    return $controller->$method();
+
   }
 }
