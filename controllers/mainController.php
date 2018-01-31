@@ -7,6 +7,7 @@ use App\Core\App;
 class mainController {
   public function index()
   {
+    echo "main";
     $className="Person";
 
     if(isset($_POST["className"])){
@@ -21,8 +22,6 @@ class mainController {
       if(isset($key))
       $alls[$key]=App::get('database')->querryWhere('member_type', 'MemberType', $key);
     }
-
-    require "views/index.view.php";
-
+    require __DIR__."/../views/index.view.php";
   }
 }
